@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "./Layout.module.css";
-import Image from "next/Image";
 import { useRouter } from "next/router";
 import { CartBadge } from "../components";
 import { useDispatch, useSelector } from "react-redux";
@@ -118,7 +117,7 @@ const Layout = ({ children, auth }) => {
       <Navbar variant="dark" bg="dark" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#home">
-            <Image
+            <img
               className="me-2"
               src={"/shopping-bag.png"}
               width={32}
