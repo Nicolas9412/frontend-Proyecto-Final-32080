@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./InputStock.module.css";
 
-const index = ({ product }) => {
+const Index = ({ product }) => {
   const [stock, setStock] = useState(product.stock);
 
   const handleSubmitStock = async (product) => {
@@ -38,4 +38,4 @@ const index = ({ product }) => {
   );
 };
 
-export default index;
+export default Index;

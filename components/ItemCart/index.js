@@ -2,7 +2,7 @@ import styles from "./ItemCart.module.css";
 import Counter from "../Counter/index";
 import { useState } from "react";
 
-const index = ({ cart, product, onHandleDelete }) => {
+const Index = ({ cart, product, onHandleDelete }) => {
   const [quantity, setQuantity] = useState(0);
   const onCounterPicker = (counter) => {
     setQuantity(counter);
@@ -46,4 +46,4 @@ const index = ({ cart, product, onHandleDelete }) => {
   );
 };
 
-export default index;
+export default Index;

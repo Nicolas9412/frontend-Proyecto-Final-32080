@@ -8,7 +8,7 @@ import Layout from "../../../layouts/Layout";
 import { ItemOrder } from "../../../components";
 import { error } from "../../../src/utils/toast";
 
-const index = () => {
+const Index = () => {
   const auth = useSelector((state) => state.auth);
   const orders = useSelector((state) => state.order.orders);
   const dispatch = useDispatch();
@@ -43,4 +43,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

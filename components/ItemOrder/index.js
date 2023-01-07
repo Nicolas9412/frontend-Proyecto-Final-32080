@@ -1,7 +1,7 @@
 import styles from "./ItemOrder.module.css";
 import { useRouter } from "next/router";
 
-const index = ({ order, routePush }) => {
+const Index = ({ order, routePush }) => {
   const router = useRouter();
   return (
     <div
@@ -25,4 +25,4 @@ const index = ({ order, routePush }) => {
   );
 };
 
-export default index;
+export default Index;

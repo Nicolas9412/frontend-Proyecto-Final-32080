@@ -8,7 +8,7 @@ import { ItemCart } from "../../components";
 import { useRouter } from "next/router";
 import { error } from "../../src/utils/toast";
 
-const index = () => {
+const Index = () => {
   const cart = useSelector((state) => state.cart);
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -97,4 +97,4 @@ const index = () => {
   return <>{content && content}</>;
 };
 
-export default index;
+export default Index;

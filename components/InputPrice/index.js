@@ -1,7 +1,7 @@
 import styles from "./InputPrice.module.css";
 import { useState } from "react";
 
-const index = ({ product }) => {
+const Index = ({ product }) => {
   const [price, setPrice] = useState(product.price);
 
   const handleSubmitPrice = async (product) => {
@@ -38,4 +38,4 @@ const index = ({ product }) => {
   );
 };
 
-export default index;
+export default Index;

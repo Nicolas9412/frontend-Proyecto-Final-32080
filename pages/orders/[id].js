@@ -7,7 +7,7 @@ import Layout from "../../layouts/Layout";
 import { ItemOrder } from "../../components";
 import { error } from "../../src/utils/toast";
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const { id } = router.query;
@@ -79,4 +79,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

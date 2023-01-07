@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Counter from "../Counter/index";
 
-const index = ({ product }) => {
+const Index = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const email = useSelector((state) => state.auth.user.email);
   const cart = useSelector((state) => state.cart);
@@ -75,4 +75,4 @@ const index = ({ product }) => {
   );
 };
 
-export default index;
+export default Index;

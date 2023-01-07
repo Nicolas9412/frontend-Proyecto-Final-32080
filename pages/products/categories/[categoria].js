@@ -10,7 +10,7 @@ import Layout from "../../../layouts/Layout";
 import styles from "./Categoria.module.css";
 import { error } from "../../../src/utils/toast";
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const { categoria } = router.query;
   const [products, setProducts] = useState([]);
@@ -71,4 +71,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

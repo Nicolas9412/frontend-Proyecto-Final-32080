@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { error, success } from "../../src/utils/toast";
 import Link from "next/link";
 
-const index = () => {
+const Index = () => {
   const [email, setEmail] = useState("");
   const [fullname, setFullname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -133,4 +133,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

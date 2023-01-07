@@ -12,7 +12,7 @@ import { error, sucess } from "../../../src/utils/toast";
 
 const socket = io(`${process.env.NEXT_PUBLIC_URL_BACKEND}`);
 
-const index = () => {
+const Index = () => {
   const chat = useSelector((state) => state.chat.messages);
   const auth = useSelector((state) => state.auth);
   const router = useRouter();
@@ -169,4 +169,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

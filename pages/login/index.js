@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { autentication } from "../../src/features/auth/authSlice";
 import { error, success } from "../../src/utils/toast";
 
-const index = () => {
+const Index = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
@@ -103,4 +103,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

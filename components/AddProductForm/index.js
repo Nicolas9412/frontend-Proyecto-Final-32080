@@ -8,7 +8,7 @@ import { getCategories } from "../../src/features/categories/categoriesSlice";
 import { getProducts } from "../../src/features/products/productsSlice";
 import { error, success } from "../../src/utils/toast";
 
-const index = ({ show, handleClose, productEdit, setProductEdit }) => {
+const Index = ({ show, handleClose, productEdit, setProductEdit }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [stock, setStock] = useState("");
@@ -188,4 +188,4 @@ const index = ({ show, handleClose, productEdit, setProductEdit }) => {
   );
 };
 
-export default index;
+export default Index;

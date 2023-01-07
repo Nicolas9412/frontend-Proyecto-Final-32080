@@ -8,7 +8,7 @@ import { ItemDetailOrder } from "../../../components";
 import { getOrders } from "../../../src/features/orders/ordersSlice";
 import { error } from "../../../src/utils/toast";
 
-const order = () => {
+const Order = () => {
   const auth = useSelector((state) => state.auth);
   const router = useRouter();
   const dispatch = useDispatch();
@@ -102,4 +102,4 @@ const order = () => {
   );
 };
 
-export default order;
+export default Order;

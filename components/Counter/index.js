@@ -3,7 +3,7 @@ import { useState, useEffect, use } from "react";
 import { useDispatch } from "react-redux";
 import { updatedQuantity } from "../../src/features/cart/cartSlice";
 
-const index = ({ cart, product, onCounterPicker, initial }) => {
+const Index = ({ cart, product, onCounterPicker, initial }) => {
   const dispatch = useDispatch();
   const [initialCount, setInitialCount] = useState(initial || 1);
   const [stock, setStock] = useState(product.stock);
@@ -59,4 +59,4 @@ const index = ({ cart, product, onCounterPicker, initial }) => {
   );
 };
 
-export default index;
+export default Index;

@@ -8,7 +8,7 @@ import { getProducts } from "../../../src/features/products/productsSlice";
 import { InputPrice, InputStock, AddProductForm } from "../../../components";
 import { error, success } from "../../../src/utils/toast";
 
-const index = () => {
+const Index = () => {
   const auth = useSelector((state) => state.auth);
   const products = useSelector((state) => state.product.products);
   const router = useRouter();
@@ -127,4 +127,4 @@ const index = () => {
     </>
   );
 };
-export default index;
+export default Index;

@@ -1,6 +1,6 @@
 import styles from "./ItemDetailOrder.module.css";
 
-const index = ({ product }) => {
+const Index = ({ product }) => {
   return (
     <div
       className="w-50 d-flex justify-content-evenly align-items-center shadow-lg p-3 mb-4 bg-body-tertiary rounded"
@@ -27,4 +27,4 @@ const index = ({ product }) => {
   );
 };
 
-export default index;
+export default Index;

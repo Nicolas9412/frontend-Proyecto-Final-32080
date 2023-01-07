@@ -1,6 +1,6 @@
 import styles from "./CartBadge.module.css";
 
-const index = ({ cart }) => {
+const Index = ({ cart }) => {
   return (
     <button type="button" className="btn btn-dark position-relative">
       <i className="bi bi-cart"></i>
@@ -11,4 +11,4 @@ const index = ({ cart }) => {
   );
 };
 
-export default index;
+export default Index;

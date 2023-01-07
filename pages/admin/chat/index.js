@@ -9,7 +9,7 @@ import { getLastMessages } from "../../../src/features/chat/chatSlice";
 import { formatDate } from "../../../src/utils/formatDate";
 import { error, sucess } from "../../../src/utils/toast";
 
-const index = () => {
+const Index = () => {
   const auth = useSelector((state) => state.auth);
   const lastMessages = useSelector((state) => state.chat.lastMessages);
   const router = useRouter();
@@ -87,4 +87,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
