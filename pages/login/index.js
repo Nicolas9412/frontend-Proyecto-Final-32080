@@ -11,6 +11,12 @@ const Index = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(autentication());
+  }, []);
 
   const submit = async (e) => {
     e.preventDefault();
