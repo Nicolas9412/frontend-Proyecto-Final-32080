@@ -37,7 +37,7 @@ const Index = () => {
         .then((result) => {
           if (result.data?.error) {
             error(result.data?.error);
-            router.push("/login");
+            router.back();
             return;
           }
           setProducts(result.data);

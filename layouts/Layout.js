@@ -31,7 +31,7 @@ const Layout = ({ children, auth }) => {
     success("logout successful!");
     setTimeout(() => {
       router.push("/login");
-    }, 1000);
+    }, 250);
   };
 
   let menu = null;
@@ -73,9 +73,7 @@ const Layout = ({ children, auth }) => {
             ))}
           </NavDropdown>
         </Link>
-        <Link className="nav-link" href={"#"}>
-          <Nav.Link onClick={onHandleLogout}>Logout</Nav.Link>
-        </Link>
+
         <Link className="nav-link" href="/chat">
           <Nav.Link href="/chat">Chat</Nav.Link>
         </Link>
@@ -90,6 +88,10 @@ const Layout = ({ children, auth }) => {
             </Link>
           </Nav.Link>
         )}
+
+        <Link className="nav-link" href={"#"}>
+          <Nav.Link onClick={onHandleLogout}>Logout</Nav.Link>
+        </Link>
       </>
     );
   }
@@ -97,9 +99,6 @@ const Layout = ({ children, auth }) => {
   if (auth?.user.isAdmin) {
     menu = (
       <>
-        <Link className="nav-link" href={"#"}>
-          <Nav.Link onClick={onHandleLogout}>Logout</Nav.Link>
-        </Link>
         <Link className="nav-link" href="/admin/products">
           <Nav.Link href="/admin/products">Products</Nav.Link>
         </Link>
@@ -108,6 +107,9 @@ const Layout = ({ children, auth }) => {
         </Link>
         <Link className="nav-link" href="/admin/chat">
           <Nav.Link href="/admin/chat">Chat</Nav.Link>
+        </Link>
+        <Link className="nav-link" href={"#"}>
+          <Nav.Link onClick={onHandleLogout}>Logout</Nav.Link>
         </Link>
       </>
     );
