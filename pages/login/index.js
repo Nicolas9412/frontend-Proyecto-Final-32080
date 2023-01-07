@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Layout from "../../layouts/Layout";
 import styles from "./Login.module.css";
-import Image from "next/Image";
 import Link from "next/Link";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
@@ -63,7 +61,7 @@ const Index = () => {
         onSubmit={submit}
       >
         <div className="d-flex justify-content-center mb-3">
-          <Image src={"/key.png"} width={64} height={64} alt="login" />
+          <img src={"/key.png"} width={64} height={64} alt="login" />
         </div>
         <h2 className="text-center fs-1 fw-bold mb-4 text-dark">Login</h2>
         <div className="form-floating mb-3">

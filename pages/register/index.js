@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "./Register.module.css";
-import Image from "next/Image";
 import { useRouter } from "next/router";
 import { error, success } from "../../src/utils/toast";
 import Link from "next/link";
@@ -59,7 +58,7 @@ const Index = () => {
           onSubmit={submit}
         >
           <div className="d-flex justify-content-center mb-3">
-            <Image src={"/form.png"} width={64} height={64} alt="register" />
+            <img src={"/form.png"} width={64} height={64} alt="register" />
           </div>
           <h2 className="text-center fs-1 fw-bold mb-4 text-dark">Register</h2>
           <div className="form-floating mb-3">
