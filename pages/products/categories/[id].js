@@ -54,16 +54,13 @@ const Index = () => {
     <>
       {auth.auth && (
         <Layout auth={auth}>
-          {/*
           <div className={styles.listContainer}>
-            <h1 className={`${styles.title} mb-4 pb-3`}>List {id}</h1>
             <div className="d-flex gap-5 px-5">
               {products.map((item) => (
                 <BootCard key={item._id} product={item} />
               ))}
-              </div>
+            </div>
           </div>
-          */}
         </Layout>
       )}
     </>
