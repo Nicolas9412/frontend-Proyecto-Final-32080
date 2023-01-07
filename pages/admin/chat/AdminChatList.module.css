@@ -1,0 +1,16 @@
+.chatLayout {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 30px;
+}
+
+.imgChat {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.datetime {
+  position: absolute;
+  right: 20px;
+}

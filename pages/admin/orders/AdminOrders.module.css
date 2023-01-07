@@ -1,0 +1,12 @@
+.ordersLayout {
+  width: 100vw;
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.ordersContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

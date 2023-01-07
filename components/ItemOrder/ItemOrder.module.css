@@ -1,0 +1,17 @@
+.itemContainerGenerada {
+  width: 80%;
+  height: 200px;
+  padding: 20px;
+  background: #ffff99;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+.itemContainerFinalizada {
+  width: 80%;
+  height: 200px;
+  padding: 20px;
+  background: #9dd6ad;
+  border-radius: 10px;
+}

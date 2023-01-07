@@ -1,0 +1,11 @@
+.image {
+  width: 400px;
+  height: 400px;
+}
+.title {
+  border-bottom: 1px solid #c2c2c2;
+}
+.description {
+  text-align: justify;
+  font-size: 18px;
+}

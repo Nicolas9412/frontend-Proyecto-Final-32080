@@ -1,0 +1,49 @@
+.chatLayout {
+  margin-top: 10px;
+}
+.bodyChat {
+  height: 75vh;
+  padding: 30px;
+}
+
+.hourmsg {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.msgContainerSystem {
+  width: 40%;
+  background-color: #fffde5;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  align-self: end;
+}
+
+.msgContainerClient {
+  width: 40%;
+  background-color: #dcfff4;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.imgUser {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.bodyChat::-webkit-scrollbar {
+  width: 7px;
+}
+
+.bodyChat::-webkit-scrollbar-thumb {
+  background-color: #0d6efd;
+  border-radius: 5px;
+}
+
+.btnEmotions {
+  bottom: 60px;
+}
