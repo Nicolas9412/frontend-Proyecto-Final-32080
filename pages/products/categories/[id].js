@@ -2,17 +2,14 @@ import { useRouter } from "next/router";
 import { BootCard } from "../../../components";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
-import {
-  autentication,
-  clearError,
-} from "../../../src/features/auth/authSlice";
+import { autentication } from "../../../src/features/auth/authSlice";
 import Layout from "../../../layouts/Layout";
 import styles from "./Categoria.module.css";
 import { error } from "../../../src/utils/toast";
 
 const Index = () => {
   const router = useRouter();
-  const { categoria } = router.query;
+  const { id } = router.query;
   const [products, setProducts] = useState([]);
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -29,9 +26,9 @@ const Index = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    if (categoria) {
+    if (id) {
       fetch(
-        `${process.env.NEXT_PUBLIC_URL_BACKEND}/productos/categoria/${categoria}`,
+        `${process.env.NEXT_PUBLIC_URL_BACKEND}/productos/categoria/${id}`,
         {
           credentials: "include",
         }
@@ -51,14 +48,14 @@ const Index = () => {
           return;
         });
     }
-  }, [categoria]);
+  }, [id]);
 
   return (
     <>
       {auth.auth && (
         <Layout auth={auth}>
           <div className={styles.listContainer}>
-            <h1 className={`${styles.title} mb-4 pb-3`}>List's {categoria}</h1>
+            <h1 className={`${styles.title} mb-4 pb-3`}>List {id}</h1>
             <div className="d-flex gap-5 px-5">
               {products.map((item) => (
                 <BootCard key={item._id} product={item} />
