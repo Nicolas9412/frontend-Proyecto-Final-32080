@@ -31,7 +31,7 @@ const Layout = ({ children, auth }) => {
     success("logout successful!");
     setTimeout(() => {
       router.push("/login");
-    }, 250);
+    }, 1000);
   };
 
   let menu = null;
@@ -62,6 +62,7 @@ const Layout = ({ children, auth }) => {
           >
             {categories.map((item) => (
               <Link
+                key={item._id}
                 href={`/products/categories/${item.name}`}
                 className={styles.link}
               >
