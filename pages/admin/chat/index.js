@@ -40,46 +40,51 @@ const Index = () => {
         <Layout auth={auth}>
           <div className={`${styles.chatLayout} container`}>
             <h1>Chat Admin</h1>
-            {users.map((item) => (
-              <div
-                className="w-50 d-flex border border-primary p-3 position-relative"
-                key={item._id}
-                onClick={() => router.push(`/admin/chat/${item._id}`)}
-              >
-                <img
-                  src={faker.internet.avatar()}
-                  className={`${styles.imgChat}`}
-                />
-                <div className="d-flex flex-column justify-content-center ms-3">
-                  <span className="text-primary fw-bold mb-1">
-                    {item.fullname}
-                  </span>
-                  <span className="text-muted ms-2">
+            <div className="d-flex flex-column align-items-center">
+              {users.map((item) => (
+                <div
+                  className="w-50 d-flex border border-primary rounded p-3 position-relative my-3"
+                  key={item._id}
+                  onClick={() => router.push(`/admin/chat/${item._id}`)}
+                >
+                  <img
+                    src={faker.internet.avatar()}
+                    className={`${styles.imgChat}`}
+                  />
+                  <div className="d-flex flex-column justify-content-center ms-3">
+                    <span className="text-primary fw-bold mb-1">
+                      {item.fullname}
+                    </span>
+                    <span className="text-muted ms-2">
+                      {lastMessages.find((msg) => msg.email == item.email)
+                        ?.type == "sistema" ? (
+                        lastMessages.find((msg) => msg.email == item.email)
+                          ?.read ? (
+                          <i class="bi bi-check2-all me-1"></i>
+                        ) : (
+                          <i class="bi bi-check2 me-1"></i>
+                        )
+                      ) : null}
+                      {
+                        lastMessages.find((msg) => msg.email == item.email)
+                          ?.body
+                      }
+                    </span>
+                  </div>
+                  <span className={`${styles.datetime} text-muted ms-2`}>
                     {lastMessages.find((msg) => msg.email == item.email)
-                      ?.type == "sistema" ? (
-                      lastMessages.find((msg) => msg.email == item.email)
-                        ?.read ? (
-                        <i class="bi bi-check2-all me-1"></i>
-                      ) : (
-                        <i class="bi bi-check2 me-1"></i>
-                      )
-                    ) : null}
-                    {lastMessages.find((msg) => msg.email == item.email)?.body}
+                      ?.datetime &&
+                      formatDate(
+                        new Date(
+                          lastMessages.find(
+                            (msg) => msg.email == item.email
+                          )?.datetime
+                        )
+                      )}
                   </span>
                 </div>
-                <span className={`${styles.datetime} text-muted ms-2`}>
-                  {lastMessages.find((msg) => msg.email == item.email)
-                    ?.datetime &&
-                    formatDate(
-                      new Date(
-                        lastMessages.find(
-                          (msg) => msg.email == item.email
-                        )?.datetime
-                      )
-                    )}
-                </span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </Layout>
       )}
